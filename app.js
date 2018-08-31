@@ -1,8 +1,11 @@
-const app = angular.module('app', []);
-app.controller('HelloController', function ($scope) {
-    $scope.userName = "AngularJs1";
-    $scope.showHelloWords = false;
-    $scope.sayHello = function () {
-        this.showHelloWords = true
+const app = angular.module('app', [])
+app.controller('borderedController', function ($scope, $element) {
+    $scope.borderAll = function () {
+        const children = $element.children()
+        for (let i = 0; i < children.length; i++) {
+            const child = children[i]
+            const $child = angular.element(child)
+            $child.css('border', '1px solid red')
+        }
     }
-});
+})

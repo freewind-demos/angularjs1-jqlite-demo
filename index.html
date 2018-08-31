@@ -3,11 +3,11 @@
 </head>
 <body ng-app="app">
 <div>
-    <div ng-controller="HelloController">
-        <label>Name</label>
-        <input type="text" ng-model="userName"/>
-        <button ng-click="sayHello()">Say Hi!</button>
-        <div ng-show="showHelloWords">Hi, {{userName}}!</div>
+    <div ng-controller="borderedController">
+        <span>Hello</span>
+        <span>AngularJS</span>
+        <span>JqLite</span>
+        <button ng-click="borderAll()">Border All</button>
     </div>
 </div>
 <script src="./node_modules/angular/angular.js"></script>
